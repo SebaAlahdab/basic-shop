@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <nav class="header-bar">
+        <ul class="header-bar-ul">
+            <li class="header-bar-li">
+                <!-- <a href="/admin/add-product" class="add-product-page">Add product</a> -->
+                 <a href="/log-in" class="login-page"> log in </a>
+            </li>
+            <li> <a href="/" class="index-page">main</a></li>
+            <li> <a href="/cart" class="cart-page">cart </a></li>
+            <li> <a href="/checkout" class="checkout-page">checkout </a></li>
+            <!-- <li> <a href="admin/admin-products" class="admin-product-page"> admin products </a></li> -->
+        </ul>
+    </nav>
+     <div class="product-card" id="centered">
+                        <p class="product-title"><%= product.title %></p>
+                        <img src="<%= product.imgurl%>" alt="<%= product.title%>">
+                        <p class="product-price"><%= product.price%>$</p>
+                        <p class="product-description"> <%= product.description%></p>
+                        <form action="/cart" method="post">
+                            <input type="hidden" name="productid" value="<%= product._id %>">
+                            <button class="add-to-cart" type="submit"> add to cart </button>
+
+                        </form>
+                    </div>
+</body>

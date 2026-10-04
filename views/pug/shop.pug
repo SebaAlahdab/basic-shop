@@ -1,0 +1,22 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title shop
+        link(rel="stylesheet", href="/css/main.css")
+    body 
+        nav.header-bar 
+            ul.header-bar-ul 
+                li.header-bar-li
+                    a.add-product-page(href="./admin/add-product")  Add product 
+        .products-grid
+            if prods.length > 0 
+                each product in prods 
+                    .product-card 
+                        p.product-title  #{product.title}
+                        img(src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQZH08NHCd0uFeeavT4X1E4ER-UChYNIixygborUCfmA&s=10", alt="")
+                        p.product-price  19.99$ 
+            else 
+                h2 No products availabe 
+                    

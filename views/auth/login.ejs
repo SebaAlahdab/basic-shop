@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in </title>
+    <link rel="stylesheet" href="/css/add-product.css">
+
+</head>
+<body>
+    <div class="form-control">
+         <form action= "/log-in" method="POST">
+        <input type="text" name="Email" placeholder="Email">
+        <input type="password" name="password" placeholder="password">
+        <input type="hidden" name="_csrf" value="<%= csrftoken %>">
+         <button type="submit" class="btn"> Log in </button>   
+     </form>
+    </div>
+   
+ </body>
+</html>
